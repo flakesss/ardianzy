@@ -1,0 +1,236 @@
+.myth-of-sisyphus-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--primary-color);
+    position: relative;
+  }
+  
+  .book-header {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+  
+  .book-cover {
+    flex: 0 0 300px;
+  }
+  
+  .book-cover-img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+  
+  .book-info {
+    flex: 1;
+  }
+  
+  .book-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  
+  .book-author {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+  }
+  
+  .book-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .book-meta-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .book-summary {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: var(--text-color-secondary);
+  }
+  
+  .book-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .primary-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+  }
+  
+  .primary-btn:hover {
+    background-color: #e0e0e0;
+    color: #000;
+  }
+  
+  .secondary-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+  }
+  
+  .secondary-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Book Content */
+  .book-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .content-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    font-weight: 600;
+  }
+  
+  .book-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-color-secondary);
+  }
+  
+  blockquote {
+    border-left: 4px solid #fff;
+    padding-left: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 2rem 0;
+  }
+  
+  blockquote cite {
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #aaa;
+  }
+  
+  .theme-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+  }
+  
+  .theme-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .theme-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  
+  .annotations {
+    margin: 2rem 0;
+  }
+  
+  .annotation {
+    margin-bottom: 2rem;
+    background-color: rgba(30, 30, 30, 0.5);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+  }
+  
+  .annotation-quote {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  
+  .annotation-content {
+    padding: 1.5rem;
+  }
+  
+  .annotation-content p {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  
+  .read-more {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  
+  .full-width-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 992px) {
+    .book-header {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .book-cover {
+      max-width: 250px;
+    }
+    
+    .book-info {
+      text-align: center;
+    }
+    
+    .book-meta {
+      justify-content: center;
+    }
+    
+    .book-actions {
+      justify-content: center;
+    }
+    
+    .theme-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .book-title {
+      font-size: 2.5rem;
+    }
+    
+    .content-title {
+      font-size: 1.8rem;
+    }
+    
+    .book-content p,
+    .book-summary {
+      font-size: 1rem;
+    }
+    
+    blockquote {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .book-actions {
+      flex-direction: column;
+    }
+    
+    .book-meta-item {
+      font-size: 0.8rem;
+    }
+  }

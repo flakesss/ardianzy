@@ -1,0 +1,115 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #1a1a1a;
+  --accent-color: #ffffff;
+  --text-color: #ffffff;
+  --text-color-secondary: #a0a0a0;
+  --border-color: #333333;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --border-radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-lg);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--text-color);
+  padding: 8px 15px;
+  border: 1px solid var(--text-color);
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--text-color);
+  color: var(--primary-color);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+/* Dots Pattern */
+.dots-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+}

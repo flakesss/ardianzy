@@ -1,0 +1,646 @@
+.myth-of-sisyphus-page {
+    color: var(--text-color);
+  }
+  
+  /* Book Header */
+  .book-header {
+    padding: 4rem 0;
+    background-color: #0a0a0a;
+  }
+  
+  .book-header-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+  
+  .book-cover {
+    flex: 0 0 300px;
+  }
+  
+  .book-cover img {
+    width: 100%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+  
+  .book-info {
+    flex: 1;
+  }
+  
+  .book-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  
+  .book-author {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+  }
+  
+  .book-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  .meta-item img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .book-summary {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color-secondary);
+    margin-bottom: 2rem;
+  }
+  
+  .book-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .primary-btn {
+    background-color: #fff;
+    color: #000;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .secondary-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Book Navigation */
+  .book-navigation {
+    position: sticky;
+    top: 70px;
+    background-color: #111;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tabs-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  
+  .tab {
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border-radius: 30px;
+  }
+  
+  .tab.active {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .tab:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Tab Content */
+  .tab-content {
+    padding: 3rem 0 5rem;
+    background-color: #0a0a0a;
+  }
+  
+  .content-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Overview Tab */
+  .overview-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color-secondary);
+    margin-bottom: 1.5rem;
+  }
+  
+  blockquote {
+    border-left: 4px solid #fff;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: #fff;
+  }
+  
+  blockquote cite {
+    display: block;
+    font-size: 1rem;
+    color: #aaa;
+    margin-top: 0.5rem;
+  }
+  
+  .content-section {
+    margin: 2.5rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .overview-image {
+    margin: 2.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .overview-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-caption {
+    font-size: 0.9rem;
+    color: #aaa;
+    text-align: center;
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+  
+  /* Annotations Tab */
+  .annotations-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .annotation-card {
+    background-color: rgba(30, 30, 30, 0.5);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+  }
+  
+  .annotation-card:hover {
+    border-color: #555;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .annotation-header {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #333;
+  }
+  
+  .page-number {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  .annotation-quote {
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #333;
+  }
+  
+  .annotation-text {
+    padding: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color-secondary);
+  }
+  
+  .annotations-cta {
+    text-align: center;
+    margin: 3rem 0 1rem;
+  }
+  
+  .annotations-cta p {
+    margin-bottom: 1.5rem;
+    color: #aaa;
+  }
+  
+  .full-annotations-btn {
+    background-color: #fff;
+    color: #000;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  /* Context Tab */
+  .context-section {
+    margin-bottom: 3rem;
+  }
+  
+  .context-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color-secondary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .context-image {
+    margin: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .context-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .related-works h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .related-item {
+    text-align: center;
+  }
+  
+  .related-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .related-item h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .related-item p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0;
+  }
+  
+  /* Themes Tab */
+  .themes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .theme-card {
+    background-color: rgba(30, 30, 30, 0.5);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+  }
+  
+  .theme-card:hover {
+    border-color: #555;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .theme-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .theme-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color-secondary);
+  }
+  
+  .themes-analysis p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color-secondary);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Concepts Tab */
+  .concepts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .concept-card {
+    background-color: rgba(30, 30, 30, 0.5);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+  }
+  
+  .concept-card:hover {
+    border-color: #555;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .concept-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .concept-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color-secondary);
+  }
+  
+  .concepts-illustration {
+    margin: 2.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .concepts-illustration img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .concepts-influence p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color-secondary);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Discussion Section */
+  .discussion-section {
+    padding: 5rem 0;
+    background-color: #111;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url('./assets/MythOfSisyphus/DiscussionBackground.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .discussion-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .discussion-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .discussion-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-color-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .discussion-prompt {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+  }
+  
+  .prompt-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .prompt-list {
+    margin-left: 1.5rem;
+  }
+  
+  .prompt-list li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--text-color-secondary);
+  }
+  
+  .join-discussion {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .discussion-btn {
+    background-color: #fff;
+    color: #000;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .share-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  /* Recommendations Section */
+  .recommendations-section {
+    padding: 5rem 0;
+    background-color: #0a0a0a;
+  }
+  
+  .recommendations-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .recommendation-card {
+    background-color: rgba(30, 30, 30, 0.5);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+  }
+  
+  .recommendation-card:hover {
+    border-color: #555;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .recommendation-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .recommendation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .recommendation-card:hover .recommendation-image img {
+    transform: scale(1.05);
+  }
+  
+  .recommendation-content {
+    padding: 1.5rem;
+  }
+  
+  .recommendation-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .recommendation-author {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  
+  .recommendation-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color-secondary);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1200px) {
+    .annotations-container,
+    .themes-grid,
+    .concepts-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .recommendations-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .book-header-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .book-cover {
+      max-width: 250px;
+      margin-bottom: 2rem;
+    }
+    
+    .book-actions {
+      justify-content: center;
+    }
+    
+    .book-meta {
+      justify-content: center;
+    }
+    
+    .related-grid {
+      grid-template-columns: 1fr;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    
+    .join-discussion {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .book-title {
+      font-size: 2.5rem;
+    }
+    
+    .annotations-container,
+    .themes-grid,
+    .concepts-grid,
+    .recommendations-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .discussion-title,
+    .recommendations-title {
+      font-size: 2rem;
+    }
+    
+    .tab {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .book-title {
+      font-size: 2rem;
+    }
+    
+    .content-title,
+    .section-title {
+      font-size: 1.5rem;
+    }
+    
+    .book-summary,
+    .overview-content p,
+    .context-section p,
+    .themes-analysis p,
+    .concepts-influence p,
+    .prompt-list li {
+      font-size: 1rem;
+    }
+    
+    blockquote {
+      font-size: 1.1rem;
+    }
+  }

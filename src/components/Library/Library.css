@@ -1,0 +1,123 @@
+.library-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--primary-color);
+    position: relative;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-color-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .library-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .library-card {
+    background-color: rgba(30, 30, 30, 0.5);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .library-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .library-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+  }
+  
+  .library-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .library-card:hover .library-img {
+    transform: scale(1.05);
+  }
+  
+  .library-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .library-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .library-description {
+    font-size: 0.95rem;
+    color: var(--text-color-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+  
+  .library-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: auto;
+  }
+  
+  .library-link span {
+    transition: transform 0.3s ease;
+  }
+  
+  .library-card:hover .library-link span {
+    transform: translateX(5px);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 992px) {
+    .library-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .library-image {
+      height: 180px;
+    }
+    
+    .library-title {
+      font-size: 1.2rem;
+    }
+  }

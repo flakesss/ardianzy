@@ -1,0 +1,73 @@
+.mentorship-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .mentorship-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  
+  .mentorship-info {
+    flex: 1;
+    z-index: 2;
+  }
+  
+  .mentorship-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+  
+  .mentorship-info .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .mentorship-info .btn span {
+    transition: transform 0.3s ease;
+  }
+  
+  .mentorship-info .btn:hover span {
+    transform: translateX(5px);
+  }
+  
+  .mentorship-image {
+    flex: 1;
+    position: relative;
+  }
+  
+  .mentorship-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .mentorship-content {
+      flex-direction: column;
+    }
+    
+    .mentorship-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+    
+    .mentorship-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
