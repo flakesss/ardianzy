@@ -13,7 +13,6 @@ const Book = () => {
             <a href="#" className="btn">BELI</a>
           </div>
           <div className="book-image">
-            {/* Replace with actual book image */}
             <div className="book-cover">
               <div className="sample-book">
                 <div className="sample-text">SAMPLE BOOK PHOTO</div>

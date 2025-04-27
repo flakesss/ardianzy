@@ -2,56 +2,10 @@ import React from 'react';
 import './Home.css';
 
 const Home = ({ navigate }) => {
-  // Menu kategori navigasi
-  const menuItems = [
-    {
-      id: 1,
-      title: 'Baru Belajar?',
-      path: 'new-learner'
-    },
-    {
-      id: 2,
-      title: 'Timeline of Thoughts',
-      path: 'timeline'
-    },
-    {
-      id: 3,
-      title: 'Reading Guide',
-      path: 'reading-guide'
-    },
-    {
-      id: 4,
-      title: 'Check Our Research',
-      path: 'research'
-    }
-  ];
 
-  // Learning Path options
-  const learningPaths = [
-    {
-      id: 1,
-      title: 'Ingin Mengeksplor Ide-Ide?',
-      description: 'Jelajahi beragam konsep dan pemikiran tanpa urutan tertentu.',
-      icon: './assets/Home/Explore.svg',
-      color: '#3a86c8',
-      buttonText: 'Mulai Eksplorasi',
-      path: 'explore-ideas'
-    },
-    {
-      id: 2,
-      title: 'Belajar Sistematis?',
-      description: 'Ikuti jalur pembelajaran terstruktur sesuai tingkat pemahaman Anda.',
-      icon: './assets/Home/Systematic.svg',
-      color: '#e16745',
-      buttonText: 'Mulai Pembelajaran',
-      path: 'systematic-learning'
-    }
-  ];
-
-  // Navigasi ke halaman detail dari kategori
-  const navigateToCategory = (item) => {
-    console.log(`Navigating to ${item.path}`);
-    // Contoh implementasi navigasi sebenarnya jika diperlukan
+  const navigateToCategory = (path) => {
+    console.log(`Navigating to ${path}`);
+ 
   };
 
   // Navigasi ke Library
@@ -59,130 +13,141 @@ const Home = ({ navigate }) => {
     navigate('library', ['Home', 'Library']);
   };
 
+  // Menu kategori navigasi
+  const sections = [
+    {
+      id: 'baru-belajar',
+      badge: 'Panduan untuk Pemula',
+      title: 'Baru Belajar?',
+      description: 'Memulai perjalanan filosofis dan intelektual bisa jadi menantang. Kami telah menyiapkan panduan komprehensif untuk membantu Anda memahami konsep-konsep dasar dan memulai perjalanan eksplorasi pemikiran dengan langkah yang tepat.',
+      buttonText: 'Mulai Perjalanan Belajar',
+      path: 'new-learner',
+      backgroundImage: "src/assets/Background/crown-image.svg", // Ubah ke file SVG Anda
+      features: [
+        'Tidak tahu jurusan',
+        'Tidak tahu pekerjaan',
+        'Tidak tahu passion',
+        'Tidak tahu tujuan hidup',
+        'Tidak tahu jati diri'
+      ]
+    },
+    {
+      id: 'timeline',
+      badge: 'Kronologi Pemikiran',
+      title: 'Timeline of Thoughts',
+      description: 'Jelajahi perjalanan ide-ide filosofis sepanjang sejarah. Lihat bagaimana pemikiran berkembang dan saling mempengaruhi dari zaman kuno hingga kontemporer.',
+      buttonText: 'Lihat Timeline',
+      path: 'timeline',
+      backgroundImage: './assets/Home/timeline-background.jpg',
+      features: [
+        'Filsafat Kuno',
+        'Era Pencerahan',
+        'Masa Modern',
+        'Pasca-Modern',
+        'Kontemporer'
+      ]
+    },
+    {
+      id: 'reading-guide',
+      badge: 'Rekomendasi Bacaan',
+      title: 'Reading Guide',
+      description: 'Temukan panduan membaca terstruktur untuk karya-karya filosofis penting. Dari bacaan dasar hingga teks yang lebih kompleks, kami membantu Anda memahami konsep-konsep utama dengan lebih baik.',
+      buttonText: 'Akses Panduan',
+      path: 'reading-guide',
+      backgroundImage: './assets/Home/reading-background.jpg',
+      features: [
+        'Untuk Pemula',
+        'Tingkat Menengah',
+        'Tingkat Lanjut',
+        'Tema Populer',
+        'Diskusi Terkini'
+      ]
+    },
+    {
+      id: 'research',
+      badge: 'Kajian Mendalam',
+      title: 'Check Our Research',
+      description: 'Pelajari penelitian dan analisis mendalam yang kami lakukan tentang berbagai topik filosofis. Temukan perspektif baru dan pemahaman yang lebih kaya.',
+      buttonText: 'Lihat Penelitian',
+      path: 'research',
+      backgroundImage: './assets/Home/research-background.jpg',
+      features: [
+        'Karya Original',
+        'Analisis Mendalam',
+        'Interpretasi Teks',
+        'Studi Komparatif',
+        'Implikasi Praktis'
+      ]
+    },
+    {
+      id: 'explore-ideas',
+      badge: 'Eksplorasi Bebas',
+      title: 'Ingin Mengeksplor Ide-Ide?',
+      description: 'Jelajahi beragam konsep dan pemikiran tanpa urutan tertentu. Cocok bagi Anda yang ingin mengeksplorasi topik sesuai dengan minat.',
+      buttonText: 'Mulai Eksplorasi',
+      path: 'explore-ideas',
+      backgroundImage: './assets/Home/explore-background.jpg',
+      features: [
+        'Bebas Memilih Topik',
+        'Tanpa Urutan Tertentu',
+        'Sesuai Minat',
+        'Konten Beragam',
+        'Eksplorasi Mandiri'
+      ],
+      buttonClass: 'blue-btn'
+    },
+    {
+      id: 'systematic',
+      badge: 'Pembelajaran Terstruktur',
+      title: 'Belajar Sistematis',
+      description: 'Ikuti jalur pembelajaran terstruktur sesuai tingkat pemahaman Anda. Panduan langkah demi langkah untuk memahami konsep filosofis secara mendalam.',
+      buttonText: 'Mulai Pembelajaran',
+      path: 'systematic-learning',
+      backgroundImage: './assets/Home/systematic-background.jpg',
+      features: [
+        'Struktur Bertahap',
+        'Kurikulum Terencana',
+        'Evaluasi Pemahaman',
+        'Progres Terukur',
+        'Fondasi Kuat'
+      ],
+      buttonClass: 'orange-btn'
+    }
+  ];
+
   return (
     <div className="home-page">
-      {/* Hero Section - Baru Belajar */}
-      <section className="hero-section">
-        <div className="container">
-          <div className="hero-content">
-            <div className="hero-badge">Panduan untuk Pemula</div>
-            <h1 className="hero-title">Baru Belajar?</h1>
-            <p className="hero-subtitle">
-              Memulai perjalanan filosofis dan intelektual bisa jadi menantang. Kami telah menyiapkan 
-              panduan komprehensif untuk membantu Anda memahami konsep-konsep dasar dan memulai 
-              perjalanan eksplorasi pemikiran dengan langkah yang tepat.
-            </p>
-            <div className="hero-actions">
-              <button className="btn primary-btn">
-                Mulai Perjalanan Belajar <span>&rarr;</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="hero-background">
-          <img src="./assets/Home/NewLearner.jpg" alt="Baru Belajar Background" />
-        </div>
-      </section>
-
-      {/* Main Navigation Menu */}
-      <section className="main-menu-section">
-        <div className="container">
-          <nav className="main-navigation">
-            <ul className="menu-list">
-              {menuItems.map(item => (
-                <li 
-                  key={item.id} 
-                  className="menu-item"
-                  onClick={() => navigateToCategory(item)}
+      {/* Render semua section dengan format yang sama seperti Hero Section */}
+      {sections.map((section, index) => (
+        <section key={section.id} className={`hero-section ${index === 0 ? 'main-hero' : 'sub-hero'}`} id={section.id}>
+          <div className="container">
+            <div className="hero-content">
+              <div className="hero-badge">{section.badge}</div>
+              <h1 className="hero-title">{section.title}</h1>
+              <p className="hero-subtitle">{section.description}</p>
+              <div className="hero-actions">
+                <button 
+                  className={`btn primary-btn ${section.buttonClass || ''}`}
+                  onClick={() => navigateToCategory(section.path)}
                 >
-                  <a className="menu-link">
-                    {item.title}
-                    <span className="menu-arrow">&rarr;</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </section>
-
-      {/* Learning Paths Section */}
-      <section className="learning-paths-section">
-        <div className="container">
-          <div className="learning-paths-container">
-            {learningPaths.map(path => (
-              <div 
-                className="learning-path-card" 
-                key={path.id}
-                style={{ '--path-color': path.color }}
-              >
-                <div className="path-icon">
-                  <img src={path.icon} alt={path.title} />
-                </div>
-                <div className="path-content">
-                  <h3 className="path-title">{path.title}</h3>
-                  <p className="path-description">{path.description}</p>
-                  <button 
-                    className="btn path-btn"
-                    onClick={() => navigateToCategory(path)}
-                  >
-                    {path.buttonText}
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Content Section */}
-      <section className="featured-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Konten Unggulan</h2>
-            <p className="section-subtitle">Jelajahi beberapa analisis dan anotasi terbaik kami</p>
-          </div>
-          
-          <div className="featured-content">
-            <div className="featured-main" onClick={() => navigate('myth-of-sisyphus', ['Home', 'Library', 'Text Annotations', 'The Myth of Sisyphus'])}>
-              <div className="featured-image">
-                <img src="./assets/Home/MythOfSisyphus.jpg" alt="The Myth of Sisyphus" />
-              </div>
-              <div className="featured-info">
-                <span className="featured-tag">Featured Analysis</span>
-                <h3 className="featured-title">The Myth of Sisyphus</h3>
-                <p className="featured-author">Albert Camus</p>
-                <p className="featured-excerpt">
-                  Eksplorasi mendalam mengenai makna hidup di tengah absurditas eksistensi manusia.
-                </p>
-                <span className="featured-link">Baca Anotasi <span>&rarr;</span></span>
+                  {section.buttonText} <span>&rarr;</span>
+                </button>
               </div>
             </div>
             
-            <div className="featured-secondary">
-              <div className="featured-card" onClick={() => navigateToCategory({path: 'timeline'})}>
-                <div className="card-image">
-                  <img src="./assets/Home/FeaturedTimeline.jpg" alt="Timeline Philosophy" />
+            <div className="hero-feature">
+              {section.features.map((feature, i) => (
+                <div key={i} className="hero-feature-item">
+                  <span className="feature-label">{feature}</span>
                 </div>
-                <div className="card-content">
-                  <h4 className="card-title">Timeline of Western Philosophy</h4>
-                  <span className="card-link">Lihat Timeline <span>&rarr;</span></span>
-                </div>
-              </div>
-              
-              <div className="featured-card" onClick={() => navigateToCategory({path: 'new-learner'})}>
-                <div className="card-image">
-                  <img src="./assets/Home/FeaturedBeginners.jpg" alt="Philosophy for Beginners" />
-                </div>
-                <div className="card-content">
-                  <h4 className="card-title">Filosofi untuk Pemula: Panduan Langkah Awal</h4>
-                  <span className="card-link">Mulai Belajar <span>&rarr;</span></span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+          <div className="hero-background">
+            <img src={section.backgroundImage} alt={`${section.title} Background`} />
+          </div>
+        </section>
+      ))}
 
       {/* Call to Action */}
       <section className="cta-section">

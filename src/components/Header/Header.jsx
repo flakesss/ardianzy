@@ -63,7 +63,7 @@ const Header = ({ currentPage, navigate }) => {
         <div className="search-container">
           <input type="text" placeholder="Cari yang kamu butuhkan..." />
           <button className="search-button">
-            <img src="./assets/Header/Search.svg" alt="Search" />
+            <img src="src/assets/Header/Search.svg" alt="Search" />
           </button>
         </div>
         
