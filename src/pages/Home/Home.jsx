@@ -1,3 +1,4 @@
+// Home.jsx
 import React from 'react';
 import './Home.css';
 
@@ -5,7 +6,6 @@ const Home = ({ navigate }) => {
 
   const navigateToCategory = (path) => {
     console.log(`Navigating to ${path}`);
- 
   };
 
   // Navigasi ke Library
@@ -16,36 +16,24 @@ const Home = ({ navigate }) => {
   // Menu kategori navigasi
   const sections = [
     {
-      id: 'baru-belajar',
-      badge: 'Panduan untuk Pemula',
-      title: 'Baru Belajar?',
-      description: 'Memulai perjalanan filosofis dan intelektual bisa jadi menantang. Kami telah menyiapkan panduan komprehensif untuk membantu Anda memahami konsep-konsep dasar dan memulai perjalanan eksplorasi pemikiran dengan langkah yang tepat.',
-      buttonText: 'Mulai Perjalanan Belajar',
-      path: 'new-learner',
-      backgroundImage: "src/assets/Background/crown-image.svg", // Ubah ke file SVG Anda
-      features: [
-        'Tidak tahu jurusan',
-        'Tidak tahu pekerjaan',
-        'Tidak tahu passion',
-        'Tidak tahu tujuan hidup',
-        'Tidak tahu jati diri'
-      ]
-    },
-    {
       id: 'timeline',
       badge: 'Kronologi Pemikiran',
       title: 'Timeline of Thoughts',
       description: 'Jelajahi perjalanan ide-ide filosofis sepanjang sejarah. Lihat bagaimana pemikiran berkembang dan saling mempengaruhi dari zaman kuno hingga kontemporer.',
       buttonText: 'Lihat Timeline',
       path: 'timeline',
-      backgroundImage: './assets/Home/timeline-background.jpg',
-      features: [
-        'Filsafat Kuno',
-        'Era Pencerahan',
-        'Masa Modern',
-        'Pasca-Modern',
-        'Kontemporer'
-      ]
+      backgroundImage: 'src/assets/Background/crown-image.svg',
+      features: ['Filsafat Kuno','Era Pencerahan','Masa Modern','Pasca-Modern','Kontemporer']
+    },
+    {
+      id: 'baru-belajar',
+      badge: 'Panduan untuk Pemula',
+      title: 'Baru Belajar?',
+      description: 'Memulai perjalanan filosofis dan intelektual bisa jadi menantang. Kami telah menyiapkan panduan komprehensif untuk membantu Anda memahami konsep-konsep dasar dan memulai perjalanan eksplorasi pemikiran dengan langkah yang tepat.',
+      buttonText: 'Mulai Perjalanan Belajar',
+      path: 'new-learner',
+      backgroundImage: "src/assets/Background/Group 344.svg",
+      features: ['Tidak tahu jurusan','Tidak tahu pekerjaan','Tidak tahu passion','Tidak tahu tujuan hidup','Tidak tahu jati diri']
     },
     {
       id: 'reading-guide',
@@ -54,14 +42,8 @@ const Home = ({ navigate }) => {
       description: 'Temukan panduan membaca terstruktur untuk karya-karya filosofis penting. Dari bacaan dasar hingga teks yang lebih kompleks, kami membantu Anda memahami konsep-konsep utama dengan lebih baik.',
       buttonText: 'Akses Panduan',
       path: 'reading-guide',
-      backgroundImage: './assets/Home/reading-background.jpg',
-      features: [
-        'Untuk Pemula',
-        'Tingkat Menengah',
-        'Tingkat Lanjut',
-        'Tema Populer',
-        'Diskusi Terkini'
-      ]
+      backgroundImage: 'src/assets/Background/Group 4696.svg',
+      features: ['Untuk Pemula','Tingkat Menengah','Tingkat Lanjut','Tema Populer','Diskusi Terkini']
     },
     {
       id: 'research',
@@ -70,14 +52,8 @@ const Home = ({ navigate }) => {
       description: 'Pelajari penelitian dan analisis mendalam yang kami lakukan tentang berbagai topik filosofis. Temukan perspektif baru dan pemahaman yang lebih kaya.',
       buttonText: 'Lihat Penelitian',
       path: 'research',
-      backgroundImage: './assets/Home/research-background.jpg',
-      features: [
-        'Karya Original',
-        'Analisis Mendalam',
-        'Interpretasi Teks',
-        'Studi Komparatif',
-        'Implikasi Praktis'
-      ]
+      backgroundImage: './assets/Background/research-background.jpg',
+      features: ['Karya Original','Analisis Mendalam','Interpretasi Teks','Studi Komparatif','Implikasi Praktis']
     },
     {
       id: 'explore-ideas',
@@ -86,14 +62,8 @@ const Home = ({ navigate }) => {
       description: 'Jelajahi beragam konsep dan pemikiran tanpa urutan tertentu. Cocok bagi Anda yang ingin mengeksplorasi topik sesuai dengan minat.',
       buttonText: 'Mulai Eksplorasi',
       path: 'explore-ideas',
-      backgroundImage: './assets/Home/explore-background.jpg',
-      features: [
-        'Bebas Memilih Topik',
-        'Tanpa Urutan Tertentu',
-        'Sesuai Minat',
-        'Konten Beragam',
-        'Eksplorasi Mandiri'
-      ],
+      backgroundImage: '/src/assets/Background/explore-background.jpg',
+      features: ['Bebas Memilih Topik','Tanpa Urutan Tertentu','Sesuai Minat','Konten Beragam','Eksplorasi Mandiri'],
       buttonClass: 'blue-btn'
     },
     {
@@ -103,30 +73,27 @@ const Home = ({ navigate }) => {
       description: 'Ikuti jalur pembelajaran terstruktur sesuai tingkat pemahaman Anda. Panduan langkah demi langkah untuk memahami konsep filosofis secara mendalam.',
       buttonText: 'Mulai Pembelajaran',
       path: 'systematic-learning',
-      backgroundImage: './assets/Home/systematic-background.jpg',
-      features: [
-        'Struktur Bertahap',
-        'Kurikulum Terencana',
-        'Evaluasi Pemahaman',
-        'Progres Terukur',
-        'Fondasi Kuat'
-      ],
+      backgroundImage: '/src/assets/Background/systematic-background.jpg',
+      features: ['Struktur Bertahap','Kurikulum Terencana','Evaluasi Pemahaman','Progres Terukur','Fondasi Kuat'],
       buttonClass: 'orange-btn'
     }
   ];
 
   return (
     <div className="home-page">
-      {/* Render semua section dengan format yang sama seperti Hero Section */}
       {sections.map((section, index) => (
-        <section key={section.id} className={`hero-section ${index === 0 ? 'main-hero' : 'sub-hero'}`} id={section.id}>
+        <section
+          key={section.id}
+          className={`hero-section ${index === 0 ? 'main-hero' : 'sub-hero'}`}
+          id={section.id}
+        >
           <div className="container">
             <div className="hero-content">
               <div className="hero-badge">{section.badge}</div>
               <h1 className="hero-title">{section.title}</h1>
               <p className="hero-subtitle">{section.description}</p>
               <div className="hero-actions">
-                <button 
+                <button
                   className={`btn primary-btn ${section.buttonClass || ''}`}
                   onClick={() => navigateToCategory(section.path)}
                 >
@@ -134,7 +101,6 @@ const Home = ({ navigate }) => {
                 </button>
               </div>
             </div>
-            
             <div className="hero-feature">
               {section.features.map((feature, i) => (
                 <div key={i} className="hero-feature-item">
@@ -144,12 +110,14 @@ const Home = ({ navigate }) => {
             </div>
           </div>
           <div className="hero-background">
-            <img src={section.backgroundImage} alt={`${section.title} Background`} />
+            <img
+              src={section.backgroundImage}
+              alt={`${section.title} Background`}
+            />
           </div>
         </section>
       ))}
 
-      {/* Call to Action */}
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
