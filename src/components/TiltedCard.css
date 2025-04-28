@@ -1,0 +1,78 @@
+.tilted-card-figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 800px;
+  }
+  
+  .tilted-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+  
+  .tilted-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  
+  /* Overlay judul & deskripsi ikut tilt */
+  .tilted-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 1rem 1rem;
+    z-index: 2;
+    transform: translateZ(30px);
+  }
+  
+  .tilted-card-overlay h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .tilted-card-overlay p {
+    margin: 0 0 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: #fff;
+  }
+  
+  .tilted-card-overlay .card-link {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Tooltip caption jika diaktifkan */
+  .tilted-card-caption {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 4px 10px;
+    font-size: 10px;
+    color: #2d2d2d;
+    opacity: 0;
+    z-index: 3;
+  }
+  
+  /* Untuk mobile disable tooltip */
+  @media (max-width: 640px) {
+    .tilted-card-caption {
+      display: none;
+    }
+  }
+  

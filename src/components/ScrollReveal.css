@@ -1,0 +1,10 @@
+/* Wrapper element, tidak meng‐override font ataupun ukuran */
+.scroll-reveal {
+    display: inline-block;
+  }
+  
+  .word {
+    display: inline-block;
+    white-space: pre;
+  }
+  
