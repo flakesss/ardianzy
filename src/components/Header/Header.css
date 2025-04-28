@@ -173,3 +173,37 @@
     height: 32px;
   }
 }
+.library-menu {
+  position: relative;
+}
+
+.sub-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0,0,0,0.95);
+  padding: 0.5rem 1rem;
+  list-style: none;
+  z-index: 200;
+  min-width: 180px;
+}
+
+.library-menu:hover .sub-nav {
+  display: block;
+}
+
+.sub-nav li {
+  margin: 0.5rem 0;
+}
+
+.sub-nav li a {
+  color: white;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.sub-nav li a:hover {
+  color: #aaa;
+}
